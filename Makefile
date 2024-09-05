@@ -5,11 +5,15 @@ OBJ = obj/proj.o obj/builtins.o obj/execute.o obj/utils.o
 BIN = bin/proj
 
 all: $(BIN)
+	@echo "Build completed."
 
 $(BIN): $(OBJ)
+	@echo "Linking $(BIN)"
+	@mkdir -p bin
 	$(CC) -o $(BIN) $(OBJ)
 
 obj/%.o: src/%.c
+	@echo "Compiling $<"
 	@mkdir -p obj
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -18,3 +22,5 @@ clean:
 
 run: all
 	./bin/proj
+
+.PHONY: all clean run

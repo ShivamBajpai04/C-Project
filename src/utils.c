@@ -11,7 +11,7 @@ char *read_line(void) {
     int c;
 
     if (!buffer) {
-        fprintf(stderr, "lsh: allocation error\n");
+        fprintf(stderr, "proj: allocation error\n");
         exit(EXIT_FAILURE);
     }
 
@@ -59,7 +59,7 @@ char **split_line(char *line) {
             bufsize += TOK_BUFSIZE;
             tokens = realloc(tokens, bufsize * sizeof(char *));
             if (!tokens) {
-                fprintf(stderr, "lsh: allocation error\n");
+                fprintf(stderr, "proj: allocation error\n");
                 exit(EXIT_FAILURE);
             }
         }

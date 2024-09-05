@@ -75,9 +75,9 @@ void loop(void) {
     char **args;
     int status;
     //get current directory
-    char cwd[1024];
-    getcwd(cwd, sizeof(cwd));
     do {
+        char cwd[1024];
+        getcwd(cwd, sizeof(cwd));
         printf("\033[31m%s $ ", cwd);
         line = read_line();
         args = split_line(line);

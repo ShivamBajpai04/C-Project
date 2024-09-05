@@ -36,8 +36,8 @@
 
 1. **Clone the Repository**:
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/ShivamBajpai04/C-Project.git
+    cd C-Project
     ```
 
 2. **Build the Project**:
